@@ -65,10 +65,27 @@ const Menu = () => {
   return (
     <div>
       <h2>Our Menu</h2>
+      <Pizza
+        name="Pizza Spinaci"
+        ingredient=" Tomato mozarella spinach and ricotta cheese "
+        photoName=" pizzas/spinaci.jpg"
+        price="10"
+      />
+      {/* <Pizza />
       <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza /> */}
+    </div>
+  );
+};
+
+const Pizza = (props) => {
+  console.log(props);
+
+  return (
+    <div>
+      <img src={props.photoName} alt={props.name} />
+      <h2>props.name</h2>
+      <p> I Pizza </p>
     </div>
   );
 };
@@ -85,16 +102,6 @@ const Footer = () => {
   // else alert("Sorry we are closed");
 
   return <div>{new Date().toLocaleTimeString()} We are currently Open</div>;
-};
-
-const Pizza = () => {
-  return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza spinaci" />
-      <h2>Pizza Spinaci</h2>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
-  );
 };
 
 const root = ReactDom.createRoot(document.getElementById("root"));
